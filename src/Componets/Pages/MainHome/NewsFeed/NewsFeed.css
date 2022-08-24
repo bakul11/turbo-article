@@ -1,0 +1,24 @@
+.social-media ul li a {
+    transition: 0.5s;
+}
+
+.social-media ul li a:hover {
+    color: orange ! important;
+}
+
+.social-content li a {
+    list-style: none;
+}
+
+/* Reponsive  */
+
+@media all and(max-width: 452px) {
+    .social-content {
+        flex-direction: column ! important;
+    }
+
+    .social-content ul li a {
+        margin-top: 10px;
+        display: block;
+    }
+}

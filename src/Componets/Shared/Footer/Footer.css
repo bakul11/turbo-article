@@ -1,0 +1,14 @@
+.fotMrnu li a {
+    color: rgba(253, 251, 251, 0.404);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.fotMrnu li a:hover {
+    margin-left: 10px;
+    color: rgb(238, 223, 9);
+}
+
+.fot-para {
+    color: rgba(253, 251, 251, 0.404);
+}

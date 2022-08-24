@@ -1,0 +1,20 @@
+.extra-primary{
+    border-radius: 15px;
+     border: 1px solid rgb(171, 171, 219);
+}
+.extra-danger{
+    border-radius: 15px;
+    border: 1px solid red;
+}
+.extra-success{
+    border-radius: 15px;
+       border: 1px solid rgb(171, 171, 219);
+}
+
+
+/* Btn  */
+
+.new-btn2{
+    background: orangered;
+    border: none;
+}
