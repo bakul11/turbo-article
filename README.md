@@ -1,4 +1,4 @@
-# Project Name : Turbo Dynamics 
+## Project Name : Turbo Dynamics 
 ### Link Site Link :  [www.turbo.com](https://turbo-92a45.web.app/)
 ### Technology Used 
 - HTML
@@ -17,10 +17,10 @@
 - On the dashboard there are three nested routes for normal users and 5 nested routes for admin.
 - Free and Premium article
 
-### Contact with Us 
-##### Team Leader & Backend :  [Saiful Islam](https://github.com/SIArifBD)
-##### Fontend Devloper :  [Rabiul Islam](https://github.com/rabiul1399)
-##### Fontend Devloper :  [Bakul Ray](https://github.com/bakul11)
+# Contact with Us 
+- Team Leader & Backend :  [Saiful Islam](https://github.com/SIArifBD)
+- Fontend Devloper :  [Rabiul Islam](https://github.com/rabiul1399)
+- Fontend Devloper :  [Bakul Ray](https://github.com/bakul11)
 
  
  
