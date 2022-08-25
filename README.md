@@ -1,6 +1,7 @@
 # Project Name : Turbo Dynamics 
 ### Link Site Link :  [www.turbo.com](https://turbo-92a45.web.app/)
 ### Technology Used 
+-------------------------
 - HTML
 - CSS
 - Bootstrap 
@@ -11,6 +12,7 @@
 - MongoDB
 
 ### Features
+-------------------------
 
 - Login, registration, reset password, logout, email verification, and Google sign in with Firebase authentication have all been added.
 - There is a dashboard route which is private. After logging in, the user can see this.
@@ -18,7 +20,7 @@
 - Free and Premium article
 
 ### Contact with Us 
--------------------------------------------------------------------------
+-------------------------
 - Team Leader & Backend :  [Saiful Islam](https://github.com/SIArifBD)
 - Fontend Devloper :  [Rabiul Islam](https://github.com/rabiul1399)
 - Fontend Devloper :  [Bakul Ray](https://github.com/bakul11)
