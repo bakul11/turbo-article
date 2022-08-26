@@ -83,7 +83,7 @@ const navigate = useNavigate();
         pack: pack,
         transactionId: paymentIntent.id
     }
-    fetch(`https://whispering-ridge-30056.herokuapp.com/article/${email}`, {
+    fetch(`https://whispering-ridge-30056.herokuapp.com/user/${email}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json',
