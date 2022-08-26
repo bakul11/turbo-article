@@ -80,6 +80,7 @@ const navigate = useNavigate();
       // navigate('/premium')
        //store payment on database
        const payment = {
+        email:email,
         pack: pack,
         transactionId: paymentIntent.id
     }
