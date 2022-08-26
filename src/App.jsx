@@ -19,6 +19,8 @@ import MyPost from './Componets/Dashboard/MyPost/MyPost';
 import AllPost from './Componets/Dashboard/AllPost/AllPost';
 import PostArticle from './Componets/Dashboard/PostArticle/PostArticle';
 import SubcribeUser from './Componets/Dashboard/SubcribeUser/SubcribeUser';
+import Premium from './Componets/Pages/Premium/Premium';
+
 
 const App = () => {
   return (
@@ -36,6 +38,11 @@ const App = () => {
         <Route path='/blog' element={
           <RequireAuth>
             <Blog />
+          </RequireAuth>
+        }></Route>
+        <Route path='/premium' element={
+          <RequireAuth>
+            <Premium />
           </RequireAuth>
         }></Route>
 
@@ -74,6 +81,7 @@ const App = () => {
           <Route path='mypost' element={<MyPost />}></Route>
           <Route path='allpost' element={<AllPost />}></Route>
           <Route path='subcribe' element={<SubcribeUser />}></Route>
+         
 
         </Route>
         {/* ======================DashBoard End======================  */}
