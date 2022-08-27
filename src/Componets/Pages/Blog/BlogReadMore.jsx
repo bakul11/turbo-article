@@ -16,7 +16,7 @@ const BlogReadMore = () => {
     const [loader, setLoader] = useState(true);
 
     useEffect(() => {
-        const url = `https://whispering-ridge-30056.herokuapp.com/singleArticle/${id}`;
+        const url = `http://localhost:5000/singleArticle/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

@@ -12,10 +12,10 @@ const stripePromise = loadStripe('pk_test_51LVhMvKEV8vBak4Xltts6pPUEXFdbZ1rFTuxr
 const BuyPack = () => {
     const { pack, price } = useParams();
     const [user] = useAuthState(auth);
-    console.log(user)
+ 
 
     return (
-        <div className='container shadow-lg card text-bg-secondary border-0' style={{ marginTop: '150px', marginBottom: '120px' }}>
+        <div className='container shadow-lg  text-bg-secondary border-0' style={{ marginTop: '150px', marginBottom: '120px' }}>
             <div className="Pack text-center">
             <div class="card-header">
                   <h2>Welcome to <span className='text-danger fw-bold'>{pack} </span> Pack</h2>
