@@ -17,11 +17,11 @@ const SubcriptionCart = ({ sub }) => {
     return (
         <div className="col-lg-4 col-md-4 col-sm-12">
             <Zoom>
-                <div className={ `card shadow-lg p-4 extra-${background}` }>
+                <div className={ `shadow-lg p-4 extra-${background}` }>
                     <div className="content text-center">
-                        <h4 className='text-dark text-capitalize fs-4 fw-bold'>{ pack }</h4>
+                        <h4 className='text-capitalize fs-4 fw-bold'>{ pack }</h4>
                         <p className="text-secondary text-capitalize">{ user }</p>
-                        <h2 className="text-dark fw-bold">${ price }</h2>
+                        <h2 className=" fw-bold">${ price }</h2>
                         <p className="text-secondary">{ devices }</p>
                     </div>
                     <div className="btn-sec">

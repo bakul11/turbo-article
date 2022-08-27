@@ -7,10 +7,11 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'
 import auth from './../../Firebase/FirebaseConfig';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-
+import { faBook, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import useDarkMode from 'use-dark-mode';
 
 const Navbar = () => {
+    const darkMode = useDarkMode(false);
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
@@ -18,6 +19,10 @@ const Navbar = () => {
         signOut(auth);
         navigate('/');
         toast.success('Logout Success');
+    }
+
+    const darkModes =() =>{
+
     }
 
 
@@ -50,17 +55,28 @@ const Navbar = () => {
 
                                 </li>
                             }
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-3">
                                 {
                                     user ? <span className="nav-link text-light" style={{ cursor: 'pointer' }} onClick={handleLogoutNow}>Logout</span> : <NavLink className="nav-link text-light" to="/login">Login</NavLink>
                                 }
                             </li>
-                            <li className="nav-item ms-5">
+                           
+                            <li className="nav-item ms-2">
                                 {
                                     user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px' }}>{user?.displayName?.slice(0, 2)}</div> : ''
                                 }
                             </li>
-
+           
+                            <li className='my-auto mx-1 '>   
+            
+                           <button type="button" className='mx-2' onClick={darkMode.disable}>
+                           <FontAwesomeIcon icon={faSun} />
+                         </button>                            
+                         <button type="button"  onClick={darkMode.enable}>
+                         <FontAwesomeIcon icon={faMoon} />
+                         </button> 
+                         
+                        </li>
                         </ul>
                     </div>
                 </div>

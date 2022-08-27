@@ -49,7 +49,7 @@ const BlogReadMore = () => {
                             </p>
                         </div>
                         <div className="blog-title-sec pt-4">
-                            <p className='text-dark lh-lg'>{article?.disc}</p>
+                            <p className='lh-lg'>{article?.disc}</p>
                         </div>
                         <div className="thanks mt-5">
                             <h5 className='text-primary'>Thanks you for reading our Articles</h5>

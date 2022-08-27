@@ -82,7 +82,7 @@ const navigate = useNavigate();
        const payment = {
         email:email,
         pack: pack,
-        transactionId: paymentIntent.id
+        transactionId: transactionId
     }
     fetch(`https://whispering-ridge-30056.herokuapp.com/user/${email}`, {
         method: 'PATCH',

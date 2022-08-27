@@ -20,12 +20,13 @@ import AllPost from './Componets/Dashboard/AllPost/AllPost';
 import PostArticle from './Componets/Dashboard/PostArticle/PostArticle';
 import SubcribeUser from './Componets/Dashboard/SubcribeUser/SubcribeUser';
 import Premium from './Componets/Pages/Premium/Premium';
-
+import './App.css';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ScrollToTop />
+     <div className='App'>
+     <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path='/' element={<MainHome />}></Route>
@@ -91,6 +92,7 @@ const App = () => {
 
       </Routes>
       <Footer />
+     </div>
     </BrowserRouter>
   );
 };
