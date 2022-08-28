@@ -20,6 +20,9 @@ import AllPost from './Componets/Dashboard/AllPost/AllPost';
 import PostArticle from './Componets/Dashboard/PostArticle/PostArticle';
 import SubcribeUser from './Componets/Dashboard/SubcribeUser/SubcribeUser';
 import Premium from './Componets/Pages/Premium/Premium';
+import AboutUs from './Componets/Pages/AboutUs/AboutUs';
+import Profile from './Componets/Pages/Profile/Profile';
+import EditProfile from './Componets/Pages/Profile/EditProfile/EditProfile';
 
 
 const App = () => {
@@ -29,6 +32,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<MainHome />}></Route>
+        <Route path='/about' element={<AboutUs />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/pricing' element={<Pricing />}></Route>
@@ -81,10 +85,15 @@ const App = () => {
           <Route path='mypost' element={<MyPost />}></Route>
           <Route path='allpost' element={<AllPost />}></Route>
           <Route path='subcribe' element={<SubcribeUser />}></Route>
-         
+
 
         </Route>
         {/* ======================DashBoard End======================  */}
+
+        {/* ======================User Profile Start======================  */}
+        <Route path='/profile' element={<Profile />}></Route>
+        <Route path='/editProfile' element={<EditProfile />}></Route>
+        {/* ======================User Profile End======================  */}
 
         <Route path='*' element={<NoMatch />}></Route>
 
