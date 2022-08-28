@@ -12,7 +12,7 @@ const RecentPost = () => {
 
     //load all recent post
     useEffect(() => {
-        fetch(('https://whispering-ridge-30056.herokuapp.com/article'))
+        fetch(('http://localhost:5000/article'))
             .then(res => res.json())
             .then(data => {
                 setLoader(false);

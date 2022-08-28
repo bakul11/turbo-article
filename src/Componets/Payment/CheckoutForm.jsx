@@ -14,7 +14,7 @@ const {displayName,email} = user;
 const navigate = useNavigate();
 
     useEffect( () =>{
-        fetch('https://whispering-ridge-30056.herokuapp.com/create-payment-intent',{
+        fetch('http://localhost:5000/create-payment-intent',{
             method: 'POST',
             headers: {
               'content-type': 'application/json',
@@ -80,10 +80,11 @@ const navigate = useNavigate();
       // navigate('/premium')
        //store payment on database
        const payment = {
+        email:email,
         pack: pack,
         transactionId: paymentIntent.id
     }
-    fetch(`https://whispering-ridge-30056.herokuapp.com/article/${email}`, {
+    fetch(`http://localhost:5000/user/${email}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json',

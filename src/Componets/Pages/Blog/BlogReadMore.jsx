@@ -16,7 +16,7 @@ const BlogReadMore = () => {
     const [loader, setLoader] = useState(true);
 
     useEffect(() => {
-        const url = `https://whispering-ridge-30056.herokuapp.com/singleArticle/${id}`;
+        const url = `http://localhost:5000/singleArticle/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -49,7 +49,7 @@ const BlogReadMore = () => {
                             </p>
                         </div>
                         <div className="blog-title-sec pt-4">
-                            <p className='text-dark lh-lg'>{article?.disc}</p>
+                            <p className='lh-lg'>{article?.disc}</p>
                         </div>
                         <div className="thanks mt-5">
                             <h5 className='text-primary'>Thanks you for reading our Articles</h5>

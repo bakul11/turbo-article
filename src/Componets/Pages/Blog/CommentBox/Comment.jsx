@@ -22,7 +22,7 @@ const Comment = () => {
         }
 
         //post comment 
-        const url = `https://whispering-ridge-30056.herokuapp.com/doComment`;
+        const url = `http://localhost:5000/doComment`;
 
         fetch(url, {
             method: 'POST',

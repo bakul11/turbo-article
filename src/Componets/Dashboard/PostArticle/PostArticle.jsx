@@ -43,7 +43,7 @@ const PostArticle = () => {
 
                     }
                     //send post in mongodb
-                    fetch('https://whispering-ridge-30056.herokuapp.com/article', {
+                    fetch('http://localhost:5000/article', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
