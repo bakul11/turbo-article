@@ -1,0 +1,8 @@
+.profile-social-link ul li {
+    border-bottom: 1px solid rgba(94, 90, 90, 0.274);
+    padding: 10px;
+}
+
+.newBtn {
+    font-family: 'Poppins', sans-serif;
+}
