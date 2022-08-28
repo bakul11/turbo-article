@@ -13,6 +13,7 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
+    const updateNavigate = useNavigate();
 
     const handleLogoutNow = () => {
         signOut(auth);
@@ -20,6 +21,10 @@ const Navbar = () => {
         toast.success('Logout Success');
     }
 
+
+    const updateProfile = () => {
+        updateNavigate('/profile')
+    }
 
     return (
         <div>
@@ -31,33 +36,36 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
                                 <NavLink className="nav-link text-light " aria-current="page" to="/">Home</NavLink>
                             </li>
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
+                                <NavLink className="nav-link text-light" to="/about">About Us</NavLink>
+                            </li>
+                            <li className="nav-item ms-4">
                                 <NavLink className="nav-link text-light" to="/pricing">Pricing</NavLink>
                             </li>
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
                                 <NavLink className="nav-link text-light" to="/blog">Blog</NavLink>
                             </li>
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
                                 <NavLink className="nav-link text-light" to="/premium">Premium</NavLink>
                             </li>
                             {
                                 user &&
-                                <li className="nav-item ms-5">
+                                <li className="nav-item ms-4">
                                     <NavLink className="nav-link text-light" to="/dashboard">Dashboard</NavLink>
 
                                 </li>
                             }
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
                                 {
                                     user ? <span className="nav-link text-light" style={{ cursor: 'pointer' }} onClick={handleLogoutNow}>Logout</span> : <NavLink className="nav-link text-light" to="/login">Login</NavLink>
                                 }
                             </li>
-                            <li className="nav-item ms-5">
+                            <li className="nav-item ms-4">
                                 {
-                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px' }}>{user?.displayName?.slice(0, 2)}</div> : ''
+                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px',cursor:'pointer' }} onClick={updateProfile}>{user?.displayName?.slice(0, 2)}</div> : ''
                                 }
                             </li>
 
