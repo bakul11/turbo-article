@@ -22,9 +22,9 @@ const Navbar = () => {
         toast.success('Logout Success');
     }
 
-    const darkModes =() =>{
+    // const darkModes = () => {
 
-    }
+    // }
 
 
     const updateProfile = () => {
@@ -69,26 +69,26 @@ const Navbar = () => {
                                 }
                             </li>
 
-                           
-                            <li className="nav-item ms-5">
+
+
 
                             <li className="nav-item ms-4">
 
                                 {
-                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px',cursor:'pointer' }} onClick={updateProfile}>{user?.displayName?.slice(0, 2)}</div> : ''
+                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px', cursor: 'pointer' }} onClick={updateProfile}>{user?.displayName?.slice(0, 2)}</div> : ''
                                 }
                             </li>
-           
-                            <li className='my-auto mx-1 '>   
-            
-                           <button type="button"  onClick={darkMode.disable}>
-                           <FontAwesomeIcon icon={faSun} />
-                         </button>                            
-                         <button type="button"  onClick={darkMode.enable}>
-                         <FontAwesomeIcon icon={faMoon} />
-                         </button> 
-                         
-                        </li>
+
+                            <li className='my-auto mx-1 '>
+
+                                <button type="button" onClick={darkMode.disable}>
+                                    <FontAwesomeIcon icon={faSun} />
+                                </button>
+                                <button type="button" onClick={darkMode.enable}>
+                                    <FontAwesomeIcon icon={faMoon} />
+                                </button>
+
+                            </li>
                         </ul>
                     </div>
                 </div>

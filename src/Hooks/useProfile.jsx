@@ -24,7 +24,7 @@ const useProfile = () => {
                 console.log("ami da vai", data)
             })
 
-    }, [currentUser,old])
+    }, [currentUser, old])
     return [old, setOldUser]
 }
 export default useProfile;
