@@ -65,7 +65,7 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item ms-4">
                                 {
-                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px',cursor:'pointer' }} onClick={updateProfile}>{user?.displayName?.slice(0, 2)}</div> : ''
+                                    user ? <div className="nav-link text-dark rounded-pill border border-light bg-warning text-uppercase text-center fw-bold align-self-center" style={{ height: '40px', width: '40px', cursor: 'pointer' }} onClick={updateProfile}>{user?.displayName?.slice(0, 2)}</div> : ''
                                 }
                             </li>
 
