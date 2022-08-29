@@ -14,7 +14,7 @@ const useAdmin = user => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    const getAdmin = result.admin;
+                    const getAdmin = result?.admin;
                     setAdmin(getAdmin);
                 })
         }

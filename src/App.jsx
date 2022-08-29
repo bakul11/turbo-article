@@ -30,79 +30,79 @@ import EditProfile from './Componets/Pages/Profile/EditProfile/EditProfile';
 const App = () => {
   return (
     <BrowserRouter>
-     <div className='App'>
-     <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<MainHome />}></Route>
-        <Route path='/about' element={<AboutUs />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
-        <Route path='/pricing' element={<Pricing />}></Route>
+      <div className='App'>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<MainHome />}></Route>
+          <Route path='/about' element={<AboutUs />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
+          <Route path='/pricing' element={<Pricing />}></Route>
 
-        {/* ======================Blog Start======================  */}
+          {/* ======================Blog Start======================  */}
 
-        <Route path='/blog' element={
-          <RequireAuth>
-            <Blog />
-          </RequireAuth>
-        }></Route>
-        <Route path='/premium' element={
-          <RequireAuth>
-            <Premium />
-          </RequireAuth>
-        }></Route>
+          <Route path='/blog' element={
+            <RequireAuth>
+              <Blog />
+            </RequireAuth>
+          }></Route>
+          <Route path='/premium' element={
+            <RequireAuth>
+              <Premium />
+            </RequireAuth>
+          }></Route>
 
-        <Route path='/readmore/:id' element={
-          <RequireAuth>
-            <BlogReadMore />
-          </RequireAuth>
-        }></Route>
+          <Route path='/readmore/:id' element={
+            <RequireAuth>
+              <BlogReadMore />
+            </RequireAuth>
+          }></Route>
 
-        <Route path='/recent/:id' element={
-          <RequireAuth>
-            <ReadRecent />
-          </RequireAuth>
-        }></Route>
+          <Route path='/recent/:id' element={
+            <RequireAuth>
+              <ReadRecent />
+            </RequireAuth>
+          }></Route>
 
-        {/* ======================Blog End======================  */}
-
-
-        {/* ======================Payment Route Start======================  */}
-        <Route path='/payment/:pack/:price' element={
-          <RequireAuth>
-            <BuyPack />
-          </RequireAuth>
-        }></Route>
-        {/* ======================Payment Route End======================  */}
+          {/* ======================Blog End======================  */}
 
 
-        {/* ======================DashBoard Start======================  */}
-        <Route path='/dashboard' element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>
-        } >
-          <Route index element={<PostArticle />}></Route>
-          <Route path='alluser' element={<AllUser />}></Route>
-          <Route path='mypost' element={<MyPost />}></Route>
-          <Route path='allpost' element={<AllPost />}></Route>
-          <Route path='subcribe' element={<SubcribeUser />}></Route>
+          {/* ======================Payment Route Start======================  */}
+          <Route path='/payment/:pack/:price' element={
+            <RequireAuth>
+              <BuyPack />
+            </RequireAuth>
+          }></Route>
+          {/* ======================Payment Route End======================  */}
 
 
-        </Route>
-        {/* ======================DashBoard End======================  */}
+          {/* ======================DashBoard Start======================  */}
+          <Route path='/dashboard' element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          } >
+            <Route index element={<PostArticle />}></Route>
+            <Route path='alluser' element={<AllUser />}></Route>
+            <Route path='mypost' element={<MyPost />}></Route>
+            <Route path='allpost' element={<AllPost />}></Route>
+            <Route path='subcribe' element={<SubcribeUser />}></Route>
 
-        {/* ======================User Profile Start======================  */}
-        <Route path='/profile' element={<Profile />}></Route>
-        <Route path='/editProfile' element={<EditProfile />}></Route>
-        {/* ======================User Profile End======================  */}
 
-        <Route path='*' element={<NoMatch />}></Route>
+          </Route>
+          {/* ======================DashBoard End======================  */}
 
-      </Routes>
-      <Footer />
-     </div>
+          {/* ======================User Profile Start======================  */}
+          <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/editProfile' element={<EditProfile />}></Route>
+          {/* ======================User Profile End======================  */}
+
+          <Route path='*' element={<NoMatch />}></Route>
+
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };

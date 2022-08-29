@@ -1,8 +1,9 @@
-.social-media ul li a {
+.social-media2 ul li a {
     transition: 0.5s;
+    text-decoration: none;
 }
 
-.social-media ul li a:hover {
+.social-media2 ul li a:hover {
     color: orange ! important;
 }
 

@@ -5,7 +5,7 @@ import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-sv
 import { Zoom } from 'react-reveal';
 
 const AboutCart = ({ singleTeam }) => {
-    const { name, title, photo, linkedin, fb, github, leader,opp } = singleTeam;
+    const { name, title, photo, linkedin, fb, github, leader, opp } = singleTeam;
     return (
         <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5 text-center">
             <Zoom>

@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-// import './NewsFeed.css'
+import './NewsFeed.css'
 import { Link } from 'react-router-dom';
 
 const NewsFeed = () => {
@@ -32,7 +32,7 @@ const NewsFeed = () => {
                         </form>
                     </div>
                     <div className="col-lg-4 col-md-6">
-                        <div className="social-media mt-3">
+                        <div className="social-media2 mt-3">
                             <ul className='d-flex align-items-center social-content'>
                                 <li className='ms-3'><Link to="/" className='text-light'><FontAwesomeIcon icon={faFacebookF} className='me-2' />Facebook</Link></li>
                                 <li className='ms-3'><Link to="/" className='text-light'><FontAwesomeIcon icon={faYoutube} className='me-2' />Youtube</Link></li>
