@@ -81,7 +81,7 @@ const Navbar = () => {
 
                             <li className='my-auto mx-1 '>
 
-                                <button type="button" onClick={darkMode.disable}>
+                                <button type="button" className='text-warning' onClick={darkMode.disable}>
                                     <FontAwesomeIcon icon={faSun} />
                                 </button>
                                 <button type="button" onClick={darkMode.enable}>
@@ -89,6 +89,7 @@ const Navbar = () => {
                                 </button>
 
                             </li>
+                           
                         </ul>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ const AboutCart = ({ singleTeam }) => {
                         <img src={photo} alt="team leader" className='img-fluid mx-auto rounded-pill' style={{ height: '100px', width: '100px' }} />
                     </div>
                     <div className="team-title">
-                        <h6 className='fw-bold fs-5'>{name}</h6>
+                        <h6 className='fw-semibold fs-5'>{name}</h6>
                         <p className='m-0'>{opp}</p>
                         <h6 className='text-primary'>{title}</h6>
                         <div className="social-media pt-3">

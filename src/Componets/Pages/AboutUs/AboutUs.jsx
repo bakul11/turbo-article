@@ -13,7 +13,7 @@ import AboutTop from './AboutTop';
 const teamData = [
     {
         photo: rabuil,
-        name: "Rabuil Islam",
+        name: "Rabiul Islam",
         title: "Frontend Developer",
         opp: 'Team Member',
         fb: "https://www.facebook.com/profile.php?id=100010907586352",

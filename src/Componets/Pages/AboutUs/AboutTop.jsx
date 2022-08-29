@@ -12,7 +12,7 @@ const AboutTop = () => {
                 <div className="col-lg-7 col-md-7 col-sm-12 col-12">
                     <Slide right>
                         <div className="about-item" style={{ marginTop: '150px' }}>
-                            <h2 className='fw-bold text-dark'>Contact <span className='text-danger'>with us</span> <br /> <span className='text-danger'>24 Hours</span> Services</h2>
+                            <h2 className='fw-bold '>Contact <span className='text-danger'>with us</span> <br /> <span className='text-danger'>24 Hours</span> Services</h2>
                             <p>The world's most popular Article base platform Turbo Dynamics connects a global community of 90 million readers and writers through the power of story.Do you want build your any project just contact with us</p>
                             <Link to='/'>
                                 <button className="btn btn-primary ms-2 rounded-pill">Explore Now <FontAwesomeIcon icon={faArrowRightToBracket} className='ms-2'></FontAwesomeIcon></button>
