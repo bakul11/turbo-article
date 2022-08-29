@@ -69,9 +69,16 @@ const Navbar = () => {
                                 }
                             </li>
 
+                            <li className='nav-item ms-4 mt-2'>
 
+                                <button type="button" className='text-warning border-0' onClick={darkMode.disable}>
+                                    <FontAwesomeIcon icon={faSun} />
+                                </button>
+                                <button type="button" className='text-dark border-0' onClick={darkMode.enable}>
+                                    <FontAwesomeIcon icon={faMoon} />
+                                </button>
 
-
+                            </li>
                             <li className="nav-item ms-4">
 
                                 {
@@ -79,17 +86,6 @@ const Navbar = () => {
                                 }
                             </li>
 
-                            <li className='my-auto mx-1 '>
-
-                                <button type="button" className='text-warning' onClick={darkMode.disable}>
-                                    <FontAwesomeIcon icon={faSun} />
-                                </button>
-                                <button type="button" onClick={darkMode.enable}>
-                                    <FontAwesomeIcon icon={faMoon} />
-                                </button>
-
-                            </li>
-                           
                         </ul>
                     </div>
                 </div>

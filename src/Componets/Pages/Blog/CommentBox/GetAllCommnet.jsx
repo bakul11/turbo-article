@@ -11,7 +11,7 @@ const GetAllCommnet = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/getPostComment')
+        fetch('https://whispering-ridge-30056.herokuapp.com/getPostComment')
 
             .then(res => res.json())
             .then(result => {

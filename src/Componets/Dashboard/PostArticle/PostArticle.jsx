@@ -10,7 +10,7 @@ import auth from './../../Firebase/FirebaseConfig';
 
 const PostArticle = () => {
     const [user] = useAuthState(auth);
-    const { register, handleSubmit,  reset, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const screet_key = 'e7b3c92c06537e14d85d152ffd62709c';
     const userDisplayName = user?.displayName;
     const email = user?.email;
@@ -43,7 +43,7 @@ const PostArticle = () => {
 
                     }
                     //send post in mongodb
-                    fetch('http://localhost:5000/article', {
+                    fetch('https://whispering-ridge-30056.herokuapp.com/article', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

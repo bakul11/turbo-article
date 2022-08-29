@@ -17,7 +17,7 @@ const MyPost = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/article/${user.email}`, {
+        fetch(`https://whispering-ridge-30056.herokuapp.com/article/${user.email}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json',
@@ -43,7 +43,7 @@ const MyPost = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/article/${id}`, {
+                    fetch(`https://whispering-ridge-30056.herokuapp.com/article/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'content-type': 'application/json'

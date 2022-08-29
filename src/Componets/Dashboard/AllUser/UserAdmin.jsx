@@ -9,7 +9,7 @@ const UserAdmin = ({ admin, index, setAllUser, allUser }) => {
 
     //make admin 
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://whispering-ridge-30056.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 "content-type": "application/json",
@@ -36,7 +36,7 @@ const UserAdmin = ({ admin, index, setAllUser, allUser }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/user/${id}`, {
+                    fetch(`https://whispering-ridge-30056.herokuapp.com/user/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'content-type': 'application/json'

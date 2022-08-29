@@ -11,7 +11,7 @@ const AllPost = () => {
 
     //load api
     useEffect(() => {
-        fetch("http://localhost:5000/article")
+        fetch("https://whispering-ridge-30056.herokuapp.com/article")
             .then((res) => res.json())
             .then((data) => {
                 setContent(data);
@@ -35,7 +35,7 @@ const AllPost = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/article/${id}`, {
+                    fetch(`https://whispering-ridge-30056.herokuapp.com/article/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'content-type': 'application/json'

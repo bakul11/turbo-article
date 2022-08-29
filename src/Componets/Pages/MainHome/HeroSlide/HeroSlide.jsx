@@ -1,6 +1,6 @@
 import React from 'react';
 import Slide from 'react-reveal/Slide';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +21,9 @@ const HeroSlide = () => {
                             <h5 className=' fs-6'>Turbo Dynamics connects a global community of 90 million readers and writers through the power of story.</h5>
                             <div className="btn-sec mt-4">
                                 <button className="btn btn-primary rounded-pill" onClick={handleReading}>Start Reading <FontAwesomeIcon icon={faArrowRightToBracket} className='ms-2'></FontAwesomeIcon></button>
-                                <button className="btn btn-danger ms-2 rounded-pill">Write Now <FontAwesomeIcon icon={faArrowRightToBracket} className='ms-2'></FontAwesomeIcon></button>
+                                <Link to='/dashboard'>
+                                    <button className="btn btn-danger ms-2 rounded-pill">Write Now <FontAwesomeIcon icon={faArrowRightToBracket} className='ms-2'></FontAwesomeIcon></button>
+                                </Link>
                             </div>
                         </div>
                     </Slide>

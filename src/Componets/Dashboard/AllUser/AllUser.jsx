@@ -13,7 +13,7 @@ const AllUser = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/user', {
+        fetch('https://whispering-ridge-30056.herokuapp.com/user', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

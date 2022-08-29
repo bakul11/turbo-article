@@ -3,74 +3,65 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import Zoom from 'react-reveal';
 import { useForm } from 'react-hook-form';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from './../../../Firebase/FirebaseConfig';
 import editPic from '../../../../images/editprofle.jpg'
-import swal from 'sweetalert';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 
 const EditProfile = () => {
-    const [loading, setLoading] = useState(true);
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const [user] = useAuthState(auth);
-    const screet_key = 'e7b3c92c06537e14d85d152ffd62709c';
-    const currentUser = user?.email;
-    const navigate = useNavigate();
-
+    const { register, handleSubmit,  formState: { errors } } = useForm();
+  
     const onSubmit = (data) => {
-        const image = data?.photoURL[0];
-        const formData = new FormData()
-        formData.append('image', image);
+        // const image = data?.photoURL[0];
+    //     const formData = new FormData()
+    //     formData.append('image', image);
 
-        // post Api Calling methods
-        const url = `https://api.imgbb.com/1/upload?key=${screet_key}`;
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.success) {
-                    const photo = result.data.url;
+    //     // post Api Calling methods
+    //     const url = `https://api.imgbb.com/1/upload?key=${screet_key}`;
+    //     fetch(url, {
+    //         method: 'POST',
+    //         body: formData
+    //     })
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             if (result.success) {
+    //                 const photo = result.data.url;
 
-                    const editAllDatasend = {
-                        displayName: data.displayName,
-                        email: data.email,
-                        occupation: data.occupation,
-                        presentAddress: data.presentAddress,
-                        parmentAddress: data.parmentAddress,
-                        phone: data.phone,
-                        skills: data.skills,
-                        website: data.website,
-                        github: data.github,
-                        facebook: data.facebook,
-                        linkdedin: data.linkedin,
-                        instagram: data.instagram,
-                        photoURL: photo
+    //                 const editAllDatasend = {
+    //                     displayName: data.displayName,
+    //                     email: data.email,
+    //                     occupation: data.occupation,
+    //                     presentAddress: data.presentAddress,
+    //                     parmentAddress: data.parmentAddress,
+    //                     phone: data.phone,
+    //                     skills: data.skills,
+    //                     website: data.website,
+    //                     github: data.github,
+    //                     facebook: data.facebook,
+    //                     linkdedin: data.linkedin,
+    //                     instagram: data.instagram,
+    //                     photoURL: photo
 
-                    }
-                    //send data in database 
-                    fetch(`http://localhost:5000/editProfile/${currentUser}`, {
-                        method: 'PUT',
-                        headers: {
-                            'content-type': 'application/json'
-                        },
-                        body: JSON.stringify(editAllDatasend)
-                    })
-                        .then(res => res.json())
-                        .then(getResult => {
-                            setLoading(false);
-                            swal('Post Successfully', 'Your Post is successfully done', 'success');
-                            reset();
-                            navigate('/profile');
-                        })
-                        .catch(err => {
-                            swal('Post Fail', 'Your Post is fail done', 'error');
-                            setLoading(false);
-                        })
-                }
-            })
+    //                 }
+    //                 //send data in database 
+    //                 fetch(`https://whispering-ridge-30056.herokuapp.com/editProfile/${currentUser}`, {
+    //                     method: 'PUT',
+    //                     headers: {
+    //                         'content-type': 'application/json'
+    //                     },
+    //                     body: JSON.stringify(editAllDatasend)
+    //                 })
+    //                     .then(res => res.json())
+    //                     .then(getResult => {
+
+    //                         swal('Post Successfully', 'Your Post is successfully done', 'success');
+    //                         reset();
+    //                         navigate('/profile');
+    //                     })
+    //                     .catch(err => {
+    //                         swal('Post Fail', 'Your Post is fail done', 'error');
+
+    //                     })
+    //             }
+    //         })
 
     }
 
@@ -98,11 +89,11 @@ const EditProfile = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="row gy-2">
                                     <div className="col-lg-11">
-                                        <input {...register("displayName", { required: true })} className='form-control' type='text' placeholder={user?.displayName} />
+                                        <input {...register("displayName", { required: true })} className='form-control' type='text' placeholder="Full Name"/>
                                         {errors.fullName && <span className='text-danger'>Full Name is required</span>}
                                     </div>
                                     <div className="col-lg-11">
-                                        <input {...register("email", { required: true })} className='form-control' type='email' placeholder={user?.email} />
+                                        <input {...register("email", { required: true })} className='form-control' type='email' placeholder="" />
                                         {errors.email && <span className='text-danger'>Email is required</span>}
                                     </div>
                                     <div className="col-lg-11">
@@ -169,10 +160,7 @@ const EditProfile = () => {
                     </Zoom>
                 </div>
             </div>
-            {/* loadding */}
-            {
-                loading ? <span>Loading wait uploading....</span> : ''
-            }
+
         </div>
     );
 };
