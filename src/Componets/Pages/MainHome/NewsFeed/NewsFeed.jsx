@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import './NewsFeed.css'
 import { Link } from 'react-router-dom';
 
 const NewsFeed = () => {
