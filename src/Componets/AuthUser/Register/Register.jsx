@@ -120,7 +120,7 @@ const Register = () => {
                                         </div>
                                         {errors.confirmPassword && <span className='text-danger'>Confirm is required</span>}
                                     </div>
-                                    {signInError}
+                                    {/* {signInError} */}
                                     <div className="col-lg-12">
                                         <input type="submit" className='btn btn-danger w-100 rounded-pill' value='Sign UP' />
                                     </div>
