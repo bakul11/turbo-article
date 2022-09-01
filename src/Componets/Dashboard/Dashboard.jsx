@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './Dashboard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBarChart, faArrowAltCircleUp} from '@fortawesome/free-regular-svg-icons';
+import { faBarChart, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './../Firebase/FirebaseConfig';
 import useAdmin from './../../Hooks/useAdmin';
@@ -40,6 +40,9 @@ const Dashboard = () => {
                                     {
                                         admin ? <NavLink to='subcribe'> <FontAwesomeIcon icon={faBarsProgress} className='me-2' />Subcribe User</NavLink> : ''
                                     }
+                                </li>
+                                <li>
+                                    <NavLink to='paidUser' ><FontAwesomeIcon icon={faBarChart} className='me-2' /> Paid Users</NavLink>
                                 </li>
                             </ul>
                         </div>

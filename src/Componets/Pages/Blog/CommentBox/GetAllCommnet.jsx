@@ -5,13 +5,13 @@ import CommentCart from './CommentCart';
 import TableAnimate from './../../../Animation/TableAnimate';
 import './GetAllCommnet.css';
 
-const GetAllCommnet = () => {
+const GetAllCommnet = ({ id }) => {
     const [comment, setComment] = useState([]);
     const [loader, setLoader] = useState(true);
 
 
     useEffect(() => {
-        fetch('https://whispering-ridge-30056.herokuapp.com/getPostComment')
+        fetch(`https://whispering-ridge-30056.herokuapp.com/filterCommnet/${id}`)
 
             .then(res => res.json())
             .then(result => {
@@ -21,11 +21,14 @@ const GetAllCommnet = () => {
             .catch(err => {
                 setLoader(true)
             })
-    }, [comment])
+    }, [comment, id])
 
     return (
         <div className='comment-sec mt-4'>
             <h6 className='text-danger fs-4 text-decoration-underline'>See all comments</h6>
+            <p>
+                {comment.length === 0 ? <span className='text-secondary mt-2'>No comment</span> : ""}
+            </p>
             <div className="row gy-3">
                 {
                     comment.map(singleComment => <CommentCart singleComment={singleComment} key={singleComment._id} />)
