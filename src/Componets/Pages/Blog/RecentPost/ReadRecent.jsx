@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCalendar } from '@fortawesome/free-regular-svg-icons';
 import Comment from '../CommentBox/Comment';
 
+
 const ReadRecent = () => {
     const { id } = useParams();
     const [article, setArticle] = useState({});
@@ -41,7 +42,7 @@ const ReadRecent = () => {
                 </div>
             </div>
             {/* add comment box */}
-            <Comment />
+            <Comment id={id} />
         </div>
     );
 };

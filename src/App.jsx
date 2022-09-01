@@ -24,6 +24,7 @@ import Premium from './Componets/Pages/Premium/Premium';
 import AboutUs from './Componets/Pages/AboutUs/AboutUs';
 import Profile from './Componets/Pages/Profile/Profile';
 import EditProfile from './Componets/Pages/Profile/EditProfile/EditProfile';
+import PaidUser from './Componets/Dashboard/PaidUser/PaidUser';
 
 
 
@@ -88,6 +89,7 @@ const App = () => {
             <Route path='mypost' element={<MyPost />}></Route>
             <Route path='allpost' element={<AllPost />}></Route>
             <Route path='subcribe' element={<SubcribeUser />}></Route>
+            <Route path='paidUser' element={<PaidUser />}></Route>
 
 
           </Route>

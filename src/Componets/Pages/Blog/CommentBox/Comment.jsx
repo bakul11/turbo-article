@@ -8,7 +8,7 @@ import GetAllCommnet from './GetAllCommnet';
 
 
 
-const Comment = () => {
+const Comment = ({id}) => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [user] = useAuthState(auth);
     const userDisplayName = user?.displayName;
@@ -18,7 +18,8 @@ const Comment = () => {
 
         const postCommentData = {
             commnet: commnet,
-            userDisplayName: userDisplayName
+            userDisplayName: userDisplayName,
+            postId:id
         }
 
         //post comment 
@@ -55,7 +56,7 @@ const Comment = () => {
             </div>
             <ToastContainer />
             {/* load comment  */}
-            <GetAllCommnet />
+            <GetAllCommnet id={id} />
         </div>
     );
 };

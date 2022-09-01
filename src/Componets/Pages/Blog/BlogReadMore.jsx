@@ -57,7 +57,7 @@ const BlogReadMore = () => {
 
                     </div>
                     {/* add comment box */}
-                    <Comment />
+                    <Comment id={id} />
                 </div>
                 <div className="col-lg-4">
                     <RecentPost />
