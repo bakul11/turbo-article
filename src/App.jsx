@@ -24,6 +24,7 @@ import Premium from './Componets/Pages/Premium/Premium';
 import AboutUs from './Componets/Pages/AboutUs/AboutUs';
 import Profile from './Componets/Pages/Profile/Profile';
 import EditProfile from './Componets/Pages/Profile/EditProfile/EditProfile';
+import WriteNowButton from './Componets/Pages/MainHome/WriteNowButton/WriteNowButton';
 
 
 
@@ -41,6 +42,12 @@ const App = () => {
           <Route path='/pricing' element={<Pricing />}></Route>
 
           {/* ======================Blog Start======================  */}
+
+          <Route path='/writeArticle' element={
+            <RequireAuth>
+              <WriteNowButton />
+            </RequireAuth>
+          }></Route>
 
           <Route path='/blog' element={
             <RequireAuth>
