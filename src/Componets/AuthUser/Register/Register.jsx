@@ -38,6 +38,7 @@ const Register = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
     let signInError;
+    console.log(signInError);
 
     useEffect(() => {
         if (token) {
