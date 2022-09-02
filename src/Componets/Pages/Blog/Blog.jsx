@@ -3,6 +3,7 @@ import Animate from "../../Animation/Animate";
 import BlogCart from "./BlogCart";
 import { faHandHoldingHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import CategoryBlog from "./CategoryBlog/CategoryBlog";
 
 const Blog = () => {
   const [content, setContent] = useState([]);

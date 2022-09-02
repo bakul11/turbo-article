@@ -23,6 +23,8 @@ const PostArticle = () => {
         const formData = new FormData()
         formData.append('image', image);
 
+        console.log(data);
+
         // post Api Calling methods
         const url = `https://api.imgbb.com/1/upload?key=${screet_key}`;
         fetch(url, {
@@ -38,6 +40,7 @@ const PostArticle = () => {
                         userEmail: email,
                         disc: data.disc,
                         photo: getPhoto,
+                        category: data.category,
                         userDisplayName: userDisplayName,
                         postDateTime: postDateTime,
 
@@ -87,6 +90,15 @@ const PostArticle = () => {
                                     <div className="col-lg-11">
                                         <textarea {...register("disc", { required: true })} className='form-control' rows="3" type='text' placeholder='Discription' />
                                         {errors.disc && <span className='text-danger'>Discription is required</span>}
+                                    </div>
+                                    <div className="col-lg-11">
+                                        <select {...register("category", { required: true })} className="form-control" required>
+                                            <option value="All">All</option>
+                                            <option value="react">React</option>
+                                            <option value="redux">Redux</option>
+                                            <option value="programing">Programing</option>
+                                        </select>
+                                        {errors.category && <span className='text-danger'>category is required</span>}
                                     </div>
                                     <div className="col-lg-11">
                                         <input {...register("photo", { required: true })} className='form-control' type='file' placeholder='Title' />
