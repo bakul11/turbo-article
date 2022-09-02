@@ -21,8 +21,8 @@ const Premium = () => {
     }, []);
     return (
         <div
-            className="container"
-            style={{ marginTop: "150px", marginBottom: "100px" }}
+            className="container justSpace"
+
         >
             <div className="blog-title text-center mb-5">
                 <h3 className="fw-bold fs-4">Our Latest Premium Article</h3>
@@ -55,11 +55,7 @@ const Premium = () => {
                         <Animate />
                         <Animate />
                         <Animate />
-                        <Animate />
-                        <Animate />
-                        <Animate />
-                        <Animate />
-                        <Animate />
+
                     </>
                 ) : (
                     ""

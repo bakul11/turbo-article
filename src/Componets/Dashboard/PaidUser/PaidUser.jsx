@@ -10,7 +10,7 @@ const PaidUser = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/paidUser')
+        fetch('https://whispering-ridge-30056.herokuapp.com/paidUser')
             .then(res => res.json())
             .then(data => {
                 setPaidUser(data);

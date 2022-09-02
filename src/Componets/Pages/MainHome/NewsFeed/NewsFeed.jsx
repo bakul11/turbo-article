@@ -3,8 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const NewsFeed = () => {
+
+    const handleSubcribe = () => {
+        swal('Subcribe Done', 'Thanks You for subscribe', 'success');
+    }
+
     return (
         <div className='news_feed bg-primary'>
             <div className='container-fluid ps-5 pe-5'>
@@ -25,7 +31,7 @@ const NewsFeed = () => {
                             <div className="input-box position-relative">
                                 <input type="email" placeholder='Email address' required className='pt-3 pb-3 w-100 rounded border-0 ps-2 emailInput' />
                                 <div className="sub-btn position-absolute top-50 start-100 translate-middle">
-                                    <input type="submit" className='bg-danger border-0 text-light rounded-end p-3 border-0 submitInput' />
+                                    <input type="submit" value='Subcribe' className='bg-danger border-0 text-light rounded-end p-3 border-0 submitInput' onClick={handleSubcribe} />
                                 </div>
                             </div>
                         </form>
