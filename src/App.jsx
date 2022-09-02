@@ -26,6 +26,7 @@ import Profile from './Componets/Pages/Profile/Profile';
 import EditProfile from './Componets/Pages/Profile/EditProfile/EditProfile';
 import WriteNowButton from './Componets/Pages/MainHome/WriteNowButton/WriteNowButton';
 import PaidUser from './Componets/Dashboard/PaidUser/PaidUser';
+import PremiumReadMore from './Componets/Pages/Premium/PremiumReadMore';
 
 
 
@@ -56,9 +57,16 @@ const App = () => {
               <Blog />
             </RequireAuth>
           }></Route>
+
           <Route path='/premium' element={
             <RequireAuth>
               <Premium />
+            </RequireAuth>
+          }></Route>
+
+          <Route path='/premiumArticleReadMore/:id' element={
+            <RequireAuth>
+              <PremiumReadMore />
             </RequireAuth>
           }></Route>
 
